@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tantangan & Solusi Green Logistics</title>
+
+<style>
+:root{
+  --base:#e7ece6;
+  --green:#2e7d32;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+/* BODY */
+body{
+  background:#e7ece6;
+  line-height:1.7;
+  color:#0d0c22;
+}
+
+/* HEADER */
+header{
+  position:relative;
+  min-height:26vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#ffffff;
+  overflow:hidden;
+}
+
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+    url('https://plus.unsplash.com/premium_photo-1675313135522-f2fac35d869a?q=80&w=2070&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  animation:zoom 18s linear infinite alternate;
+  z-index:0;
+}
+
+.hero{
+  position:relative;
+  z-index:1;
+  animation:fadeUp 1.3s ease forwards;
+}
+
+header h1{
+  font-size:36px;
+  margin-bottom:6px;
+  text-shadow:0 3px 10px rgba(0,0,0,.45);
+}
+
+header p{
+  font-size:15px;
+  opacity:.95;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+
+/* SECTION */
+section{
+  background:#ffffff;
+  max-width:920px;
+  margin:88px auto;
+  padding:52px 44px;
+  border-radius:28px;
+  box-shadow:0 22px 44px rgba(0,0,0,.25);
+  animation:fadeUp 1.2s ease forwards;
+}
+
+/* HEADING */
+h2{
+  font-size:26px;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+h2.challenge{
+  color:#d17b00;
+}
+h2.challenge::before{content:"⚠️";}
+
+h2.solution{
+  color:var(--green);
+}
+h2.solution::before{content:"💡";}
+
+/* BOX */
+.challenge-box,
+.solution-box{
+  padding:22px 26px;
+  border-radius:18px;
+  margin-bottom:32px;
+  box-shadow:0 8px 18px rgba(0,0,0,.14);
+  transition:.35s ease;
+}
+
+.challenge-box{
+  background:#fff3e0;
+  border-left:6px solid #ff9800;
+}
+
+.solution-box{
+  background:#f1f7f3;
+  border-left:6px solid var(--green);
+}
+
+.challenge-box:hover,
+.solution-box:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 16px 32px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+footer{
+  background:#ffffff;
+  color:#2a2a2a;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  margin-top:80px;
+  border-top:1px solid rgba(46,125,50,.25);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes zoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1{font-size:30px;}
+  section{margin:60px 16px;padding:36px 26px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1>Tantangan & Solusi</h1>
+    <p>Implementasi Green Logistics</p>
+  </div>
+</header>
+
+<section id="tantangan-solusi">
+  <h2 class="challenge">Tantangan</h2>
+  <div class="challenge-box">
+    Tingginya biaya investasi awal untuk penerapan teknologi ramah lingkungan, seperti kendaraan rendah emisi,
+    sistem energi terbarukan, serta digitalisasi proses logistik masih menjadi hambatan utama bagi banyak perusahaan,
+    khususnya skala kecil dan menengah. (Syahputra et al., 2025)
+  </div>
+
+  <h2 class="solution">Solusi</h2>
+  <div class="solution-box">
+    Pemberian insentif pajak, subsidi teknologi hijau, serta dukungan regulasi secara bertahap dari pemerintah
+    dapat membantu perusahaan bertransisi menuju green logistics tanpa menimbulkan beban finansial yang berlebihan.
+    Selain itu, kolaborasi dengan mitra logistik dan pemanfaatan teknologi digital menjadi langkah strategis
+    untuk meningkatkan efisiensi. (Li, Huang & Li, 2025) dan (Prameswari, Ratna & Dewi, 2025)
+  </div>
+</section>
+
+<footer>
+  © 2026 Green Logistics | Langkah Besar Aksi Berkelanjutan
+</footer>
+
+</body>
+</html>

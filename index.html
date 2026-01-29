@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Green Logistics Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+/* ===== BODY (BASE COLOR FIX) ===== */
+body{
+  position:relative;
+  background:#e7ece6;
+  color:#0d0c22;
+}
+
+/* overlay halus biar tone lebih dalam */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.18);
+  z-index:-1;
+}
+
+/* ===== LINK ===== */
+a{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+/* ===== HEADER ===== */
+.header{
+  position:relative;
+  padding:110px 16px 90px;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+.header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url('https://plus.unsplash.com/premium_photo-1697461935240-adb25fafdfd3?q=80&w=1200&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  z-index:0;
+}
+
+.header .inner{
+  position:relative;
+  z-index:1;
+  animation:fadeDown 1.2s ease forwards;
+}
+
+.header .title{
+  font-size:44px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:14px;
+}
+
+.header .subtitle{
+  font-size:18px;
+  color:rgba(255,255,255,.9);
+  max-width:640px;
+  margin:0 auto;
+}
+
+/* ===== CONTENT ===== */
+.container{
+  max-width:1200px;
+  margin:72px auto 88px;
+  padding:0 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:40px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#ffffff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 16px 34px rgba(0,0,0,.18);
+  color:#000;
+  transform:translateY(40px);
+  opacity:0;
+  animation:fadeUp .9s ease forwards;
+  animation-delay:var(--delay);
+  transition:transform .45s ease, box-shadow .45s ease;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.04);
+  box-shadow:0 30px 58px rgba(0,0,0,.28);
+}
+
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  transition:transform .6s ease, filter .6s ease;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+  filter:brightness(.9);
+}
+
+.card-content{
+  padding:24px;
+}
+
+.card-title{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
+  transition:.3s;
+}
+
+.card:hover .card-title{
+  color:#1a7f37;
+}
+
+.card-desc{
+  font-size:15px;
+  line-height:1.7;
+  color:#333;
+}
+
+.card-meta{
+  margin-top:18px;
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  color:#1a7f37;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#f5f3f1;
+  padding:36px 16px;
+  text-align:center;
+  font-size:13px;
+  color:#2a2a2a;
+  border-top:1px solid rgba(26,127,55,.25);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .header .title{font-size:34px}
+  .header .subtitle{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="inner">
+    <div class="title">Green Logistics</div>
+    <div class="subtitle">
+      Untuk Mewujudkan Sistem Logistik yang Berkelanjutan dan Ramah Lingkungan
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/pengertian-green-logistics" target="_blank" style="--delay:.1s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Pengertian Green Logistics</div>
+          <div class="card-desc">Konsep dasar pengelolaan logistik yang memperhatikan dampak lingkungan.</div>
+          <div class="card-meta">Definition</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/manfaat-green-logistics" target="_blank" style="--delay:.2s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Manfaat Green Logistics</div>
+          <div class="card-desc">Keuntungan bagi perusahaan sekaligus kelestarian lingkungan.</div>
+          <div class="card-meta">Benefits</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/tujuan-green-logistics" target="_blank" style="--delay:.3s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Tujuan Green Logistics</div>
+          <div class="card-desc">Sasaran utama dalam penerapan sistem logistik berkelanjutan.</div>
+          <div class="card-meta">Objectives</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/contoh-penerapan-green-logistics" target="_blank" style="--delay:.4s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Contoh Penerapan</div>
+          <div class="card-desc">Implementasi green logistics di dunia industri dan distribusi.</div>
+          <div class="card-meta">Practice</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/studi-kasus" target="_blank" style="--delay:.5s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Studi Kasus</div>
+          <div class="card-desc">Perusahaan yang berhasil menerapkan konsep green logistics.</div>
+          <div class="card-meta">Case Study</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://sites.google.com/view/pengertian-green-logistics/halaman-muka/tantangan-dan-solusi" target="_blank" style="--delay:.6s">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=900&q=80">
+        <div class="card-content">
+          <div class="card-title">Tantangan & Solusi</div>
+          <div class="card-desc">Hambatan implementasi serta solusi yang dapat diterapkan.</div>
+          <div class="card-meta">Challenges</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 Green Logistics — Langkah Kecil Dampak Besar
+</div>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contoh Penerapan Green Logistics</title>
+
+<style>
+:root{
+  --base:#e7ece6;
+  --green:#2e7d32;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+/* BODY */
+body{
+  background:#e7ece6;
+  line-height:1.7;
+  color:#0d0c22;
+}
+
+/* HEADER */
+header{
+  position:relative;
+  min-height:25vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#ffffff;
+  overflow:hidden;
+}
+
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1719825523711-eda3221c111c?q=80&w=1400&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  animation:zoom 18s linear infinite alternate;
+  z-index:0;
+}
+
+.hero{
+  position:relative;
+  z-index:1;
+  animation:fadeUp 1.3s ease forwards;
+}
+
+header h1{
+  font-size:38px;
+  margin-bottom:6px;
+  text-shadow:0 3px 10px rgba(0,0,0,.45);
+}
+
+header p{
+  font-size:15px;
+  opacity:.95;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+
+/* SECTION */
+section{
+  background:#ffffff;
+  max-width:900px;
+  margin:88px auto;
+  padding:52px 44px;
+  border-radius:28px;
+  box-shadow:0 22px 44px rgba(0,0,0,.25);
+  animation:fadeUp 1.2s ease forwards;
+}
+
+h2{
+  color:var(--green);
+  font-size:28px;
+  margin-bottom:28px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+h2::before{
+  content:"🚛";
+}
+
+/* LIST */
+ul{
+  list-style:none;
+}
+
+li{
+  background:#f1f7f3;
+  margin-bottom:18px;
+  padding:20px 24px;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,.14);
+  transition:.35s ease;
+}
+
+li b{
+  color:#1b5e20;
+}
+
+li a{
+  color:#2e7d32;
+  font-weight:600;
+  text-decoration:none;
+}
+
+li a:hover{
+  text-decoration:underline;
+}
+
+li:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 16px 32px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+footer{
+  background:#ffffff;
+  color:#2a2a2a;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  margin-top:80px;
+  border-top:1px solid rgba(46,125,50,.25);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes zoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1{font-size:32px;}
+  section{margin:60px 16px;padding:36px 26px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1>Contoh Penerapan Green Logistics</h1>
+    <p>Implementasi Nyata Logistik Ramah Lingkungan</p>
+  </div>
+</header>
+
+<section id="contoh-penerapan">
+  <h2>Contoh Penerapan</h2>
+
+  <ul>
+    <li>
+      <b>1. Kendaraan Ramah Lingkungan</b><br>
+      Penggunaan kendaraan listrik, hibrida, atau berbahan bakar rendah emisi.
+      (<a href="https://ejournal.unsrat.ac.id/v3/index.php/emba/article/view/59297/48176?utm_source=chatgpt.com" target="_blank">
+      Lapian et al., 2024</a>)
+    </li>
+
+    <li>
+      <b>2. Green Warehouse</b><br>
+      Gudang hemat energi dengan pencahayaan LED, panel surya, dan ventilasi alami.
+      (<a href="https://journal.itltrisakti.ac.id/index.php/jmbtl/article/view/1714?utm_source=chatgpt.com" target="_blank">
+      Syahfitria et al., 2025</a>)
+    </li>
+
+    <li>
+      <b>3. Reverse Logistics</b><br>
+      Pengelolaan produk retur dan proses daur ulang secara berkelanjutan.
+      (<a href="https://www.preprints.org/manuscript/202406.1089/v1?utm_source=chatgpt.com" target="_blank">
+      Reynolds, 2024</a>)
+    </li>
+
+    <li>
+      <b>4. Pengurangan Kemasan</b><br>
+      Penggunaan kemasan minimal, ramah lingkungan, dan dapat didaur ulang.
+      (<a href="https://rsisinternational.org/journals/ijrias/articles/integrating-green-logistics-in-energy-supply-chains-to-promote-sustainability/?utm_source=chatgpt.com" target="_blank">
+      Onukwulu et al., 2025</a>)
+    </li>
+
+    <li>
+      <b>5. Kepatuhan Regulasi Lingkungan</b><br>
+      Penerapan standar lingkungan nasional maupun internasional.
+      (<a href="https://ipssj.com/index.php/ojs/article/view/1036?utm_source=chatgpt.com" target="_blank">
+      Syahputra et al., 2025</a>)
+    </li>
+
+    <li>
+      <b>6. Digitalisasi Logistik</b><br>
+      Pemanfaatan dokumen elektronik untuk efisiensi dan pengurangan kertas.
+      (<a href="https://haloautoindo.com/green-logistics/?utm_source=chatgpt.com" target="_blank">
+      Halo Auto Indo, 2025</a>)
+    </li>
+  </ul>
+
+  <br>
+  <a href="index.html" style="font-weight:bold;">← Kembali ke Beranda</a>
+</section>
+
+<footer>
+  © 2026 Green Logistics | Langkah Kecil Dampak Besar
+</footer>
+
+</body>
+</html>

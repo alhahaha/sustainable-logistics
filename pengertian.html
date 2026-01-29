@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Logistics</title>
+
+<style>
+:root{
+  --base:#2f3a32;
+  --green:#2e7d32;
+}
+
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+  background:#e7ece6;
+  line-height:1.7;
+  color:#0d0c22;
+  position:relative;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.18);
+  z-index:-1;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:relative;
+  min-height:45vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1734797523503-288792e97f5b?q=80&w=1200&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  animation:zoom 20s linear infinite alternate;
+  z-index:0;
+}
+
+.hero{
+  position:relative;
+  z-index:1;
+  animation:fadeUp 1.4s ease forwards;
+}
+
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+  letter-spacing:1px;
+  text-shadow:0 3px 10px rgba(0,0,0,.5);
+}
+
+header p{
+  font-size:16px;
+  opacity:.95;
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
+/* ===== HERO LINK ===== */
+.hero-link{
+  margin-top:20px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  padding-bottom:4px;
+  border-bottom:2px solid rgba(255,255,255,.8);
+  transition:.3s;
+}
+
+.hero-link:hover{
+  opacity:.8;
+}
+
+/* ===== SECTION ===== */
+section{
+  background:#ffffff;
+  margin:88px auto;
+  padding:52px 44px;
+  max-width:900px;
+  border-radius:28px;
+  box-shadow:0 22px 44px rgba(0,0,0,.28);
+  animation:fadeUp 1.2s ease forwards;
+}
+
+h2{
+  color:var(--green);
+  font-size:30px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+h2::before{
+  content:"🌱";
+}
+
+section p{
+  font-size:16px;
+  color:#333;
+  text-align:justify;
+}
+
+/* ===== LINK ===== */
+a{
+  color:#2e7d32;
+  font-weight:600;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#f4f6f3;
+  color:#2a2a2a;
+  text-align:center;
+  padding:22px;
+  margin-top:80px;
+  font-size:14px;
+  border-top:1px solid rgba(46,125,50,.25);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes zoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  header h1{font-size:34px}
+  section{margin:60px 16px;padding:36px 26px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1>Green Logistics</h1>
+    <p>Sistem Logistik Berkelanjutan & Ramah Lingkungan</p>
+    <div class="hero-link" onclick="scrollToSection()">Pelajari Lebih Lanjut ↓</div>
+  </div>
+</header>
+
+<section id="pengertian">
+  <h2>Pengertian</h2>
+
+  <p>
+    Green Logistics adalah konsep manajemen logistik yang bertujuan untuk
+    mengurangi dampak negatif terhadap lingkungan melalui pengelolaan aktivitas
+    logistik secara efisien, mulai dari proses transportasi, pergudangan,
+    distribusi, hingga pengelolaan limbah, tanpa mengabaikan efektivitas
+    operasional perusahaan.
+  </p>
+
+  <p>
+    Dalam penerapannya, Green Logistics menekankan penggunaan teknologi ramah
+    lingkungan, efisiensi energi, optimalisasi rute distribusi, serta penerapan
+    sistem digital untuk mendukung keberlanjutan. Selain berkontribusi pada
+    pelestarian lingkungan, Green Logistics juga berperan dalam meningkatkan
+    citra perusahaan, kepatuhan terhadap regulasi lingkungan, serta mendukung
+    pembangunan berkelanjutan yang menyeimbangkan aspek ekonomi, sosial, dan
+    lingkungan
+    (<a href="https://www.researchgate.net/publication/263139687_Greening_logistics_and_its_impact_on_environmental_performance_an_absorptive_capacity_perspective?utm_source=chatgpt.com" target="_blank">
+      Abareshi & Molla, 2013
+    </a>).
+  </p>
+</section>
+
+<footer>
+  © 2026 Green Logistics — Langkah Kecil Dampak Besar
+</footer>
+
+<script>
+function scrollToSection(){
+  document.getElementById('pengertian')
+    .scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
